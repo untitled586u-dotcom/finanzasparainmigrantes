@@ -28,23 +28,39 @@ export function getArticlesByCategory(categorySlug: string): Article[] {
   return articles.filter((a) => a.category === categorySlug);
 }
 
+const STOP_WORDS = new Set(["para", "como", "cómo", "desde", "entre", "sobre", "tiene", "tener", "cuando", "donde", "quien", "qué", "esta", "este", "with", "your", "from", "that", "this"]);
+
+function normalizeTerms(values: string[]): Set<string> {
+  return new Set(
+    values
+      .join(" ")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 4 && !STOP_WORDS.has(word)),
+  );
+}
+
 export function getRelatedArticles(article: Article, limit = 3): Article[] {
-  const sourceTerms = new Set(article.keywords.map((k) => k.toLowerCase()));
-  const title = article.title.toLowerCase();
+  const sourceTerms = normalizeTerms([article.title, article.description, ...article.keywords]);
+  const sourceKeywords = new Set(article.keywords.map((k) => k.toLowerCase()));
   const score = (candidate: Article) => {
     if (candidate.slug === article.slug) return -1;
+    const candidateTerms = normalizeTerms([candidate.title, candidate.description, ...candidate.keywords]);
+    let overlap = 0;
+    for (const term of sourceTerms) if (candidateTerms.has(term)) overlap += 1;
+    const keywordOverlap = candidate.keywords.reduce((n, keyword) => n + (sourceKeywords.has(keyword.toLowerCase()) ? 4 : 0), 0);
     const sameCategory = candidate.category === article.category ? 2 : 0;
-    const keywordOverlap = candidate.keywords.reduce((n, keyword) => n + (sourceTerms.has(keyword.toLowerCase()) ? 3 : 0), 0);
-    const titleOverlap = candidate.keywords.reduce((n, keyword) => {
-      const words = keyword.toLowerCase().split(/[^a-záéíóúüñ0-9]+/).filter((w) => w.length > 4);
-      return n + (words.some((w) => title.includes(w)) ? 1 : 0);
-    }, 0);
-    return sameCategory + keywordOverlap + titleOverlap;
+    const sameHubFamily = (article.category === "seguro-de-auto" && candidate.category === "seguros") || (article.category === "seguros" && candidate.category === "seguro-de-auto") ? 2 : 0;
+    const titlePhrase = article.title.toLowerCase().split(/[^a-záéíóúüñ0-9]+/).filter((w) => w.length > 4 && !STOP_WORDS.has(w)).some((word) => candidate.title.toLowerCase().includes(word)) ? 1 : 0;
+    return overlap + keywordOverlap + sameCategory + sameHubFamily + titlePhrase;
   };
   return articles
     .filter((a) => a.slug !== article.slug)
     .map((a, index) => ({ a, score: score(a), index }))
     .sort((x, y) => y.score - x.score || x.index - y.index)
+    .filter(({ score }) => score > 0)
     .slice(0, limit)
     .map(({ a }) => a);
 }
