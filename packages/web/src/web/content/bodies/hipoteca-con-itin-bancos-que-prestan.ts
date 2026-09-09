@@ -1,180 +1,231 @@
-export default `Se puede comprar casa en Estados Unidos con ITIN. No es un rumor: es un producto hipotecario real que varias instituciones ofrecen desde hace más de una década. Lo que no existe es la parte fácil: los requisitos son más estrictos y el enganche es más alto. Esta guía te dice **quién presta**, **qué piden** y **cuánto cuesta de verdad**.
+Sí se puede comprar casa en Estados Unidos con ITIN. Existen programas hipotecarios de cartera ofrecidos por cooperativas de crédito, bancos comunitarios y prestamistas especializados. Pero **no existe una hipoteca ITIN universal**: el enganche, el crédito, los ingresos, las declaraciones de impuestos, las reservas y la tasa dependen del prestamista y del estado.
 
-## Por qué existe el préstamo ITIN
+Si estás empezando, esta guía te ayuda a responder las tres preguntas importantes: **quién puede prestar, qué requisitos suelen pedir y cómo comparar ofertas sin pagar de más**. También forma parte de nuestro hub de [Préstamos](/categoria/prestamos).
 
-Las hipotecas normales en EE.UU. se venden a Fannie Mae o Freddie Mac, y esas entidades exigen SSN. Un préstamo con ITIN **no se puede vender ahí**, así que el banco tiene que quedárselo en sus propios libros. Eso se llama **portfolio loan** o préstamo de cartera.
+## ¿Qué es una hipoteca con ITIN?
 
-Consecuencia directa de eso: como el banco asume todo el riesgo y no puede revenderlo, exige más enganche y cobra una tasa más alta. No es discriminación, es estructura del mercado secundario. Entender esto te ahorra frustración cuando compares ofertas.
+Una hipoteca con ITIN es un préstamo para comprar vivienda en el que el prestatario utiliza un ITIN como parte de su identificación fiscal en lugar de un SSN, cuando el programa del prestamista lo permite.
 
-Y algo importante: la [Ley de Igualdad de Oportunidad de Crédito (ECOA)](https://www.consumerfinance.gov/) prohíbe discriminar por nacionalidad u origen nacional. Un prestamista puede considerar tu estatus migratorio en la medida en que afecta su capacidad de cobrar, pero **no puede negarte crédito solo por ser extranjero**.
+Muchos de estos préstamos son **portfolio loans**: el prestamista conserva el crédito en su propia cartera en lugar de originarlo bajo los criterios estándar de determinados programas convencionales. Por eso los requisitos pueden ser diferentes.
 
-## Quién presta con ITIN
+No confundas una hipoteca ITIN con una hipoteca respaldada por FHA, VA o USDA. La elegibilidad depende del programa y de las reglas vigentes.
 
-Los nombres cambian por estado y por año, así que verifica antes de asumir. Estas son las categorías, en orden de utilidad real:
+## ¿Quién presta con ITIN?
 
-### Cooperativas de crédito (credit unions)
-Casi siempre la mejor opción: las tasas más bajas, los costos de cierre más razonables y el trato más flexible.
+La oferta cambia con frecuencia. En lugar de asumir que una empresa sigue ofreciendo el producto, confirma directamente antes de presentar una solicitud.
 
-- **Self-Help Federal Credit Union** — California, Illinois, Wisconsin, Carolinas. Programa hipotecario ITIN establecido.
-- **Latino Community Credit Union** — Carolina del Norte. Referencia nacional en préstamos a la comunidad inmigrante.
-- **Guadalupe Credit Union** — Nuevo México.
-- **Point West Credit Union** — Oregón.
-- **Alterna Savings / cooperativas locales certificadas CDFI** — busca "CDFI credit union" o "Juntos Avanzamos" más tu ciudad.
+### Cooperativas de crédito y CDFI
 
-Las cooperativas certificadas como **CDFI** tienen mandato y financiamiento federal para prestar en comunidades desatendidas. Son tu primera llamada.
+Las cooperativas y entidades comunitarias pueden ser una buena primera opción porque algunas tienen experiencia con prestatarios inmigrantes y préstamos de cartera.
+
+Ejemplos que puedes investigar, según disponibilidad y territorio:
+
+- **Self-Help Federal Credit Union**.
+- **Latino Community Credit Union**.
+- **Guadalupe Credit Union**.
+- Otras cooperativas locales y entidades CDFI.
+
+La disponibilidad concreta, el territorio y los requisitos deben verificarse directamente con la institución.
 
 ### Bancos comunitarios y regionales
-Muchos bancos pequeños hacen préstamos de cartera con ITIN sin publicitarlo. Estrategia: llama a bancos comunitarios de tu zona y pregunta por "portfolio mortgage for ITIN borrowers". Un banco con 20 sucursales en tu estado puede ser más flexible que un banco nacional.
 
-### Prestamistas especializados
-Compañías hipotecarias no bancarias que ofrecen productos ITIN a nivel nacional: **Angel Oak Mortgage Solutions**, **Citadel Servicing / Acra Lending**, **Griffin Funding**, **Carrington Mortgage**, **Quontic Bank**, **Deephaven**, **Change Lending**. Tasas más altas que las cooperativas, pero cobertura más amplia y procesos rápidos.
+Algunos bancos pequeños ofrecen préstamos de cartera que no aparecen claramente en su web. Pregunta por **"ITIN mortgage"** o **"portfolio mortgage for ITIN borrowers"** y pregunta específicamente por los requisitos de tu estado.
 
-### Bancos nacionales grandes
-**Wells Fargo**, **Bank of America** y **U.S. Bank** han tenido programas para prestatarios sin SSN en distintos momentos, generalmente en mercados específicos. Vale la pena preguntar, pero no cuentes con ello.
+### Prestamistas hipotecarios especializados
 
-### Corredores hipotecarios (mortgage brokers)
-Un broker que trabaje habitualmente con clientes ITIN te ahorra semanas: ya sabe quién presta en tu estado y con qué condiciones. Pide referencias en tu comunidad. Verifica su licencia en el [NMLS Consumer Access](https://www.nmlsconsumeraccess.org/).
+También existen compañías que comercializan productos para prestatarios con ITIN. La oferta y las condiciones cambian, así que no publiques una lista como si fuera permanente.
 
-## Qué te van a pedir
+Antes de solicitar, comprueba licencia, costos, tasa, APR, enganche, reservas y penalizaciones.
 
-### Enganche: entre 10% y 25%
-Este es el requisito que más pesa. La mayoría de los programas ITIN piden **15% a 20%**. Algunas cooperativas bajan a **10%**. Los prestamistas especializados con tasas más altas suelen pedir **20% a 25%**.
+### Mortgage brokers
 
-Sobre una casa de $300,000, eso son entre $30,000 y $75,000 de tu bolsillo, más costos de cierre.
+Un broker con experiencia en préstamos ITIN puede buscar entre varios programas. Comprueba su autorización y antecedentes en **NMLS Consumer Access** antes de entregar información sensible.
 
-### Historial de crédito
-Dos caminos:
+## Requisitos habituales
 
-**Con puntaje FICO.** Si has usado tarjetas o préstamos reportados a los burós con tu ITIN, tienes puntaje. La mayoría de los programas piden **620–680 mínimo**. Consulta [cómo construir crédito desde cero](/articulo/construir-credito-desde-cero-inmigrantes) si aún no lo tienes.
+No existe un conjunto único de requisitos, pero estos son los que aparecen con frecuencia.
 
-**Sin puntaje: crédito alternativo.** Muchos prestamistas ITIN aceptan **12 a 24 meses de historial de pagos no tradicional**: renta, luz, gas, agua, teléfono, seguro de auto, colegiatura, cuota de gimnasio. Necesitas comprobantes, no solo tu palabra. Guarda los recibos: valen dinero.
+### 1. Enganche
 
-### Declaraciones de impuestos: 2 años, sin excepción
-Este es el filtro que elimina a más gente y **el más importante de preparar con anticipación**.
+Los programas ITIN pueden exigir un enganche mayor que una hipoteca convencional. En muchos productos encontrarás cifras alrededor del **10 % al 25 %**, pero no lo tomes como regla universal.
 
-Necesitas **2 años de declaraciones federales presentadas con tu ITIN**. Sin eso no hay préstamo, punto. Si no has declarado, empieza ahora: no vas a comprar casa este año, pero sí en dos.
+Ejemplo: en una vivienda de $300,000:
 
-Si eres trabajador por cuenta propia, además: estados de cuenta bancarios de 12–24 meses, formularios 1099, registro de tu negocio si aplica.
+- 10 % = $30,000
+- 15 % = $45,000
+- 20 % = $60,000
+- 25 % = $75,000
 
-Lee nuestra guía de [cómo declarar impuestos con ITIN](/articulo/como-declarar-impuestos-con-itin-2026) y la de [si es seguro declarar con ITIN](/articulo/es-seguro-declarar-impuestos-con-itin).
+A esto pueden sumarse costos de cierre, reservas y otros gastos.
 
-### Comprobante de ingreso estable
-- 2 años en el mismo empleo o industria.
-- Talones de pago recientes (30 días).
-- Carta de verificación de empleo.
-- Depósitos bancarios que coincidan con el ingreso declarado.
+### 2. Historial de crédito
 
-Si te pagan en efectivo, el problema es de comprobación, no de legalidad. Deposita tu ingreso en el banco cada semana y declara. En dos años tendrás el expediente que necesitas.
+Algunos prestamistas establecen un puntaje mínimo; otros pueden evaluar **crédito alternativo** si no tienes FICO suficiente.
 
-### Relación deuda-ingreso (DTI)
-Casi todos los programas exigen **DTI máximo de 43% a 50%**. Se calcula así: todos tus pagos mensuales de deuda (incluida la hipoteca nueva, impuestos de propiedad y seguro) divididos entre tu ingreso mensual bruto.
+Tu expediente puede incluir historial de renta y determinados servicios, siempre que el prestamista los acepte y puedas documentarlos.
 
-Si tu ingreso es $5,000 al mes y el límite es 45%, tu total de pagos de deuda no puede pasar de $2,250.
+Si todavía estás construyendo crédito, empieza por nuestra [guía para construir crédito desde cero](/articulo/construir-credito-desde-cero-inmigrantes) y aprende [cómo obtener una tarjeta con ITIN](/articulo/tarjeta-credito-con-itin).
 
-### Reservas
-Entre **2 y 6 meses** de pagos de hipoteca en el banco después de cerrar. No basta con juntar el enganche: necesitas quedarte con dinero.
+### 3. Declaraciones de impuestos
 
-## Cuánto cuesta: la diferencia real
+Muchos programas piden historial de declaraciones federales para comprobar ingresos y capacidad de pago. **Dos años es un requisito frecuente, pero no es universal.**
 
-| Concepto | Hipoteca convencional | Hipoteca ITIN |
-|---|---|---|
-| Enganche | 3–5% | 10–25% |
-| Tasa de interés | Tasa de mercado | +1% a +3% |
-| Seguro hipotecario (PMI) | Sí, si enganche <20% | Normalmente no |
-| Puntaje mínimo | 620 | 620–680, o crédito alternativo |
-| Costos de cierre | 2–5% | 2–6% |
-| FHA / VA / USDA | Sí | No |
+Si eres trabajador independiente, pueden pedir además 1099, estados de cuenta, documentación del negocio y otros comprobantes.
 
-**Ejemplo de orden de magnitud.** Casa de $300,000 a 30 años:
+Consulta [cómo declarar impuestos con ITIN](/articulo/como-declarar-impuestos-con-itin-2026) y [cómo renovar tu ITIN](/articulo/renovar-itin-vencido) para tener tus documentos en orden.
 
-- Convencional al 6.5%, enganche 5% ($15,000): pago de principal e interés ≈ $1,802.
-- ITIN al 8.5%, enganche 20% ($60,000): pago de principal e interés ≈ $1,845.
+### 4. Ingresos verificables
 
-Fíjate en el detalle: el pago mensual acaba pareciéndose, porque el enganche más grande compensa la tasa más alta. La barrera real del préstamo ITIN **no es la mensualidad, es juntar el enganche**.
+Pueden pedir:
 
-Los números son ilustrativos. Pide cotizaciones reales.
+- Talones de pago recientes.
+- W-2 o 1099, según tu situación.
+- Estados de cuenta bancarios.
+- Verificación de empleo.
+- Historial de ingresos si trabajas por cuenta propia.
 
-## Cómo comparar tres ofertas sin equivocarte
+Lo importante no es solo cuánto ganas: es **poder demostrar de dónde viene el dinero y que el ingreso es sostenible**.
 
-La diferencia entre el mejor y el peor prestamista ITIN de tu estado puede ser de **dos puntos de tasa y 15.000 dólares de enganche**. Eso son decenas de miles de dólares en la vida del préstamo. Comparar bien es la hora mejor pagada de todo el proceso.
+### 5. Relación deuda-ingreso (DTI)
 
-Pide a cada prestamista el **Loan Estimate**, un formulario de tres páginas estandarizado por ley federal. Todos usan el mismo formato, así que se compara línea por línea. Fíjate en cinco casillas:
+El prestamista calcula cuánto representan tus pagos de deuda respecto de tu ingreso bruto mensual. El límite depende del programa.
 
-- **La tasa de interés y el APR.** El APR incluye los cargos, así que una tasa baja con APR alto significa que te están cobrando los cargos por otro lado.
-- **El enganche exigido**, en porcentaje y en dólares.
-- **Los cargos de originación** (sección A de la página 2). Son negociables.
-- **El total de efectivo para cerrar** (página 2, abajo). Es el número que sale de tu cuenta.
-- **Si hay penalización por pago anticipado** (*prepayment penalty*). Algunos préstamos de cartera la incluyen y es especialmente grave en ITIN, porque impide refinanciar barato más adelante.
+Ejemplo sencillo: si ganas $5,000 brutos al mes y el programa permite un DTI del 45 %, el conjunto de obligaciones consideradas no debería superar aproximadamente $2,250 mensuales.
 
-> [!AVISO]
-> Solicitar con varios prestamistas hipotecarios **no te destroza el puntaje**. Los modelos FICO y VantageScore agrupan todas las consultas hipotecarias hechas dentro de una ventana de 14 a 45 días y las cuentan como una sola. Comparar tres ofertas en dos semanas es gratis en términos de crédito.
+### 6. Reservas
 
-## Refinanciar: el plan que casi nadie prepara
+Algunos programas exigen dinero adicional después del cierre para demostrar que puedes absorber varios meses de pagos. Pregunta cuántos meses de reservas exige el programa concreto.
 
-Una hipoteca ITIN al 8,5 % no tiene por qué serlo para siempre. Tres cosas pueden abaratarla más adelante:
+## ¿Cuánto cuesta una hipoteca ITIN?
 
-**Obtienes SSN.** Si consigues permiso de trabajo o residencia, tu préstamo se puede refinanciar a una hipoteca convencional, con tasa de mercado y sin las restricciones del préstamo de cartera. Es el ahorro más grande disponible.
+No hay una tasa ITIN única. Una cotización depende del mercado, del programa, del enganche, del crédito, del inmueble y del perfil del prestatario.
 
-**Bajan las tasas del mercado.** La regla práctica clásica es que refinanciar compensa cuando puedes bajar al menos **0,75 a 1 punto** y piensas quedarte en la casa lo suficiente para recuperar los costos de cierre del refinanciamiento.
+En general, un préstamo de cartera puede tener una tasa más alta que una hipoteca convencional comparable. Pero **no compares solo la tasa**.
 
-**Sube tu patrimonio.** Cuando el saldo del préstamo baja del 80 % del valor de la casa, algunos prestamistas mejoran las condiciones al refinanciar porque el riesgo es menor.
+Mira también:
 
-> [!TIP]
-> Pon una alerta en el calendario cada mes de enero para revisar tu tasa contra el mercado y contra tu situación migratoria. Refinanciar es un trámite de 30 a 45 días que muchas familias posponen años, pagando de más todo ese tiempo.
+- APR.
+- Puntos.
+- Cargos de originación.
+- Costos de cierre.
+- Enganche.
+- Reservas exigidas.
+- Penalización por pago anticipado.
+- Posibilidad de refinanciar.
 
-## Estrategia paso a paso
+## Cómo comparar tres ofertas
+
+La mejor herramienta para comparar préstamos hipotecarios es pedir documentación escrita y poner las ofertas lado a lado.
 
 {.steps}
 
-1. **Declara impuestos con tu ITIN, este año y el siguiente.** Todo empieza aquí. Sin dos años de declaraciones, no hay expediente.
-2. **Abre cuenta de banco y deposita tu ingreso.** Un historial bancario limpio de 12–24 meses es evidencia de capacidad de pago. Ve [qué bancos aceptan matrícula consular](/articulo/bancos-que-aceptan-matricula-consular).
-3. **Construye crédito.** Tarjeta asegurada, préstamo constructor de crédito en una cooperativa, o ser usuario autorizado en la tarjeta de un familiar con buen historial.
-4. **Junta el enganche y no lo toques.** Los prestamistas rastrean el origen del dinero: depósitos grandes sin explicación levantan preguntas. Si es un regalo familiar, necesitas una carta de regalo firmada.
-5. **Guarda comprobantes de todo.** Renta, servicios, seguro, colegiatura. 24 meses.
-6. **Habla con tres prestamistas antes de decidir**: una cooperativa CDFI, un banco comunitario y un broker. Pide el **Loan Estimate** de cada uno, que es un documento estandarizado y comparable por ley.
-7. **Toma un curso de compradores de vivienda** con una agencia certificada por HUD. Es gratis o muy barato, y algunas cooperativas dan mejores condiciones si lo completaste. Busca agencias en [hud.gov](https://www.hud.gov/).
-8. **Consigue una preaprobación por escrito** antes de buscar casa. Sin ella, muchos vendedores no consideran tu oferta.
+1. **Busca una cooperativa o CDFI**, un banco comunitario y un broker o prestamista especializado.
+2. **Pregunta si realmente ofrecen hipoteca con ITIN** en tu estado y para tu perfil.
+3. **Solicita una cotización escrita** y, cuando corresponda, un Loan Estimate.
+4. **Compara APR y tasa**, no solo la mensualidad.
+5. **Compara efectivo necesario para cerrar**.
+6. **Pregunta por reservas y penalización por pago anticipado**.
+7. **Revisa si existen restricciones para refinanciar o vender**.
+8. **Verifica la licencia o registro del profesional o prestamista** antes de firmar.
+
+No entregues dinero a un supuesto prestamista solo porque promete una aprobación rápida.
+
+## Un ejemplo para entender el enganche
+
+Imagina una vivienda de $300,000.
+
+Con un enganche del 20 %, financias $240,000. Con un enganche del 10 %, financias $270,000.
+
+El segundo caso necesita menos efectivo inicial, pero puede tener condiciones de tasa, reservas o seguro diferentes. La pregunta correcta no es "¿cuánto es la mensualidad?", sino **"¿cuánto dinero necesito para cerrar y cuánto me costará el préstamo completo?"**
+
+Los números anteriores son ilustrativos, no una cotización.
+
+## ¿Puedo comprar con ITIN sin historial de crédito?
+
+En algunos programas sí, mediante crédito alternativo u otros criterios. En otros, necesitarás un puntaje mínimo.
+
+Si no tienes historial, no inventes información ni aceptes un préstamo abusivo solo para comprar antes. Puede ser más inteligente pasar varios meses construyendo crédito y documentando pagos.
+
+Consulta [cómo construir crédito desde cero](/articulo/construir-credito-desde-cero-inmigrantes) antes de pedir la preaprobación.
+
+## ¿Puedo comprar casa con ITIN si trabajo por cuenta propia?
+
+Sí puede ser posible, pero la documentación suele ser más importante. El prestamista puede pedir declaraciones, 1099, estados de cuenta bancarios y pruebas de continuidad de ingresos.
+
+Si cobras mediante 1099, revisa nuestra guía de [impuestos para trabajadores independientes con ITIN](/articulo/impuestos-trabajador-independiente-itin-1099).
+
+## ¿Puedo usar dinero de familiares para el enganche?
+
+Algunos programas permiten fondos de regalo y otros imponen condiciones. Nunca hagas un depósito grande sin poder explicar su origen.
+
+Pregunta al prestamista antes de mover el dinero y guarda la documentación de cualquier regalo, transferencia o ahorro que forme parte del cierre.
+
+## Refinanciar después
+
+Antes de contratar una hipoteca ITIN, pregunta qué ocurriría si más adelante:
+
+- obtienes un SSN;
+- aumenta tu puntaje de crédito;
+- baja la tasa de mercado;
+- aumenta el valor de la vivienda.
+
+Cualquiera de esos cambios puede abrir opciones de refinanciamiento, pero **no hay garantía de que un préstamo ITIN pueda convertirse automáticamente en convencional**. La nueva hipoteca tendrá que cumplir los requisitos del programa disponible en ese momento.
 
 ## Señales de alerta
 
-- **"Te consigo la hipoteca sin declaraciones de impuestos."** Casi siempre es un producto predatorio o un fraude.
-- **Cuota por adelantado para "procesar" o "reservar" el préstamo.** Los honorarios legítimos se pagan al cerrar o son cargos de solicitud pequeños y documentados.
-- **Contratos de tierra o "rent-to-own" presentados como compra de casa.** No te dan título de propiedad ni construyen equity de la misma manera, y a menudo pierdes todo si te atrasas un pago.
-- **Presión para firmar sin leer.** Tienes derecho a llevarte los documentos y revisarlos.
-- **Tasa que "cambió" el día del cierre.** El Closing Disclosure debe coincidir con el Loan Estimate salvo cambios documentados. Compáralos línea por línea.
-- **Prestamista sin licencia NMLS.** Verifícala. Toma dos minutos y es gratis.
+Desconfía si alguien:
 
-Si algo huele mal, presenta queja en la [CFPB](https://www.consumerfinance.gov/complaint/). Funciona y es gratis.
+- promete aprobación garantizada sin revisar ingresos;
+- te dice que no necesitas documentación;
+- exige una cantidad importante por adelantado sin explicar el servicio;
+- evita darte la tasa y APR por escrito;
+- no quiere revelar costos de cierre;
+- te presiona para firmar inmediatamente;
+- te pide falsificar ingresos, documentos o información migratoria.
+
+Si algo no encaja, busca una segunda opinión y verifica al profesional o prestamista.
+
+## ¿Qué relación tiene la hipoteca con tu ruta financiera?
+
+Comprar vivienda suele ser el resultado de varios pasos anteriores:
+
+1. [Organiza tu ITIN y tus impuestos](/categoria/impuestos).
+2. [Abre una cuenta bancaria](/articulo/abrir-cuenta-bancaria-sin-ssn).
+3. [Construye crédito](/categoria/credito).
+4. Ahorra para enganche y reservas.
+5. Compara varios prestamistas.
+6. Consigue una preaprobación por escrito.
+7. Compara la vivienda y el costo total antes de hacer una oferta.
+
+Ese orden reduce el riesgo de llegar a una casa que puedes comprar en teoría pero que no puedes mantener cómodamente.
 
 ## Preguntas frecuentes
 
-**¿Qué bancos dan hipoteca con ITIN en 2026?**
-Sobre todo cooperativas de crédito certificadas CDFI y de la red Juntos Avanzamos (Self-Help FCU, Latino Community CU, Guadalupe CU, Point West CU), bancos comunitarios que hacen préstamos de cartera y prestamistas especializados de alcance nacional como Angel Oak, Acra Lending, Griffin Funding, Carrington o Quontic. La lista cambia cada año y por estado: confirma por teléfono antes de dar nada por hecho.
+**¿Qué bancos dan hipoteca con ITIN?**
+La disponibilidad cambia por estado y por programa. Investiga cooperativas de crédito, CDFI, bancos comunitarios, brokers y prestamistas especializados, y confirma directamente qué producto está disponible actualmente.
 
-**¿Cuánto enganche piden para una hipoteca con ITIN?**
-Lo habitual es del 15 % al 20 %. Algunas cooperativas bajan al 10 % y hay casos documentados del 3 % al 5 % combinados con programas estatales de ayuda al enganche. Los prestamistas especializados de tasa más alta suelen pedir del 20 % al 25 %.
+**¿Cuánto enganche necesito para una hipoteca con ITIN?**
+Depende del programa. Un rango de 10 % a 25 % aparece con frecuencia, pero hay productos con requisitos diferentes. Pide el requisito exacto por escrito.
 
-**¿Qué tasa de interés cobran?**
-Entre uno y tres puntos por encima de la tasa convencional del momento. El motivo es estructural: el préstamo no se puede vender a Fannie Mae ni Freddie Mac, así que el banco se lo queda en sus libros y asume todo el riesgo.
+**¿Necesito dos años de impuestos?**
+Muchos programas los piden, especialmente para demostrar ingresos, pero no es una regla universal. Pregunta al prestamista qué historial fiscal exige.
 
-**¿Necesito puntaje de crédito o basta con el crédito alternativo?**
-Ambos caminos existen. Con FICO, la mayoría de programas piden entre 620 y 680. Sin puntaje, muchos prestamistas ITIN aceptan de 12 a 24 meses de historial alternativo documentado: renta, luz, agua, teléfono, seguro de auto o colegiatura. Necesitas comprobantes, no declaraciones verbales.
+**¿Puedo comprar casa con ITIN sin crédito?**
+Algunos programas aceptan crédito alternativo; otros requieren puntaje. La documentación de renta y servicios puede ayudar si el prestamista la acepta.
 
-**¿Se puede comprar con ITIN sin dos años de declaraciones de impuestos?**
-Prácticamente nunca en un préstamo legítimo. Quien te ofrezca una hipoteca ITIN sin declaraciones suele estar vendiendo un contrato de tierra, un rent-to-own disfrazado o un fraude. Si aún no declaras, empieza este año.
+**¿Una hipoteca ITIN siempre tiene una tasa más alta?**
+No existe una tasa única. Los préstamos de cartera pueden costar más que una hipoteca convencional comparable, pero la única forma de saberlo es comparar ofertas reales.
 
-**¿Pagaré seguro hipotecario (PMI)?**
-Normalmente no. El PMI existe para proteger a las entidades del mercado secundario, y estos préstamos no van ahí. A cambio, el banco se cubre pidiéndote un enganche mayor.
-
-**¿Puedo refinanciar después a una hipoteca normal?**
-Sí, y deberías planearlo desde el principio. Si obtienes SSN, mejoras el puntaje o bajan las tasas del mercado, refinanciar es el mayor ahorro disponible. Antes de firmar, comprueba que el préstamo no tenga penalización por pago anticipado.
+**¿Puedo refinanciar cuando obtenga SSN?**
+Puede ser posible si en ese momento cumples los requisitos del nuevo préstamo. No es automático.
 
 ## Sigue leyendo
 
-- [Cómo comprar casa con ITIN](/articulo/comprar-casa-con-itin)
-- [Cómo declarar impuestos con ITIN en 2026](/articulo/como-declarar-impuestos-con-itin-2026)
+- [Cómo comprar casa con ITIN: proceso paso a paso](/articulo/comprar-casa-con-itin)
+- [Préstamos personales con mal crédito o sin historial](/articulo/prestamos-personales-mal-credito)
+- [Cómo comprar carro con ITIN](/articulo/comprar-carro-con-itin)
 - [Cómo construir crédito desde cero](/articulo/construir-credito-desde-cero-inmigrantes)
-- [Qué bancos aceptan matrícula consular](/articulo/bancos-que-aceptan-matricula-consular)
-- [Préstamos personales con mal crédito](/articulo/prestamos-personales-mal-credito)
+- [Cómo declarar impuestos con ITIN](/articulo/como-declarar-impuestos-con-itin-2026)
+- [Ver todas las guías de Préstamos](/categoria/prestamos)
 
-*Guía informativa, no asesoría fiscal, legal ni hipotecaria. Tasas, enganches y requisitos varían por prestamista, estado y perfil, y cambian con el mercado. Pide cotizaciones por escrito y verifica la licencia NMLS de cualquier prestamista. Para dudas sobre estatus migratorio, consulta a un abogado de inmigración.*`;
+*Guía informativa, no asesoría hipotecaria, fiscal, legal ni migratoria. Las tasas, requisitos, enganches y programas cambian según prestamista, estado, mercado y perfil. Verifica las condiciones actuales, pide documentos por escrito y confirma la licencia correspondiente antes de contratar.*`;
