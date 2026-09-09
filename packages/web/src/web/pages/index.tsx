@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, FileText, Landmark, HandCoins, ReceiptText, ShieldCheck, CreditCard } from "lucide-react";
+import { ArrowRight, FileText, Landmark, ShieldCheck, CreditCard } from "lucide-react";
 import { Link } from "wouter";
 import { useSeo } from "../hooks/use-seo";
 import { ArticleCard } from "../components/article-card";
@@ -24,7 +24,7 @@ export default function HomePage() {
           <div className="mt-7 flex flex-wrap gap-3"><Link href="/articulos" className="inline-flex items-center gap-2 rounded-xl bg-[#F28C28] px-5 py-3 text-sm font-bold text-white shadow-sm transition hover:-translate-y-0.5">Explorar guías <ArrowRight className="h-4 w-4"/></Link><Link href="/categoria/credito" className="inline-flex items-center gap-2 rounded-xl border border-[#B9CBD9] bg-white px-5 py-3 text-sm font-bold text-[#123B63] hover:border-[#1264A3]">Empezar por crédito</Link></div>
           <div className="mt-7 flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-[#52657A]"><span>✓ 100% en español</span><span>✓ Enfocado en inmigrantes</span><span>✓ Información gratuita</span></div>
         </div>
-        <div className="relative mx-auto h-[340px] w-full max-w-[500px]">
+        <div className="relative mx-auto h-[340px] w-full max-w-[500px]" aria-label="Ejemplo visual del camino financiero">
           <div className="absolute inset-8 rounded-[2.5rem] bg-gradient-to-br from-[#D7EDF9] via-white to-[#E5F5EF] shadow-inner"/>
           <div className="absolute left-8 top-10 rounded-2xl bg-white p-4 shadow-lg"><div className="text-[10px] font-bold tracking-widest text-[#718196]">SCORE</div><div className="mt-1 font-display text-3xl font-bold text-[#0B9A78]">720</div></div>
           <div className="absolute right-5 top-20 rounded-2xl bg-white p-4 shadow-lg"><div className="text-[10px] font-bold tracking-widest text-[#718196]">DOCUMENTOS</div><div className="mt-1 font-bold text-[#1264A3]">ITIN → SSN</div></div>
@@ -43,6 +43,6 @@ export default function HomePage() {
 
     <section className="mx-auto max-w-[1180px] px-5 py-12 md:px-7 md:py-16"><div className="mb-7 flex items-end justify-between gap-4"><div><div className="mb-2 font-mono text-[0.68rem] font-bold tracking-[0.14em] text-[#1264A3]">GUÍAS DESTACADAS</div><h2 className="font-display text-3xl font-bold">Lo más leído</h2></div><Link href="/articulos" className="hidden items-center gap-1 text-sm font-bold text-[#1264A3] sm:flex">Ver todas <ArrowRight className="h-4 w-4"/></Link></div><div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">{featured.map((article) => <ArticleCard key={article.slug} article={article} headingLevel={3}/>)}</div></section>
 
-    <section className="mx-auto max-w-[1180px] px-5 pb-14 md:px-7"><div className="flex flex-col gap-5 rounded-2xl bg-[#F1F8FD] p-7 md:flex-row md:items-center md:justify-between"><div><div className="font-mono text-[0.68rem] font-bold tracking-[0.14em] text-[#1264A3]">RECURSOS</div><h2 className="mt-1 font-display text-2xl font-bold">¿Necesitas ayuda personalizada?</h2><p className="mt-1 text-sm text-[#617388]">Encuentra recursos y contactos útiles para dar tu siguiente paso.</p></div><Link href="/sobre-nosotros" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#123B63] px-5 py-3 text-sm font-bold text-white">Ver recursos y contactos <ArrowRight className="h-4 w-4"/></Link></div></section>
+    <section className="mx-auto max-w-[1180px] px-5 pb-14 md:px-7"><div className="flex flex-col gap-5 rounded-2xl bg-[#F1F8FD] p-7 md:flex-row md:items-center md:justify-between"><div><div className="font-mono text-[0.68rem] font-bold tracking-[0.14em] text-[#1264A3]">RECURSOS</div><h2 className="mt-1 font-display text-2xl font-bold">¿Necesitas seguir avanzando?</h2><p className="mt-1 text-sm text-[#617388]">Explora todas las guías y encuentra el siguiente paso para tu situación.</p></div><Link href="/articulos" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#123B63] px-5 py-3 text-sm font-bold text-white">Ver todas las guías <ArrowRight className="h-4 w-4"/></Link></div></section>
   </main>;
 }
