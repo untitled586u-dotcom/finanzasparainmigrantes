@@ -22,13 +22,24 @@ export function getArticlesByCategory(categorySlug: string): Article[] {
 }
 
 export function getRelatedArticles(article: Article, limit = 3): Article[] {
-  const sameCategory = articles.filter(
-    (a) => a.category === article.category && a.slug !== article.slug,
-  );
-  const others = articles.filter(
-    (a) => a.category !== article.category && a.slug !== article.slug,
-  );
-  return [...sameCategory, ...others].slice(0, limit);
+  const sourceTerms = new Set(article.keywords.map((k) => k.toLowerCase()));
+  const title = article.title.toLowerCase();
+  const score = (candidate: Article) => {
+    if (candidate.slug === article.slug) return -1;
+    const sameCategory = candidate.category === article.category ? 2 : 0;
+    const keywordOverlap = candidate.keywords.reduce((n, keyword) => n + (sourceTerms.has(keyword.toLowerCase()) ? 3 : 0), 0);
+    const titleOverlap = candidate.keywords.reduce((n, keyword) => {
+      const words = keyword.toLowerCase().split(/[^a-záéíóúüñ0-9]+/).filter((w) => w.length > 4);
+      return n + (words.some((w) => title.includes(w)) ? 1 : 0);
+    }, 0);
+    return sameCategory + keywordOverlap + titleOverlap;
+  };
+  return articles
+    .filter((a) => a.slug !== article.slug)
+    .map((a, index) => ({ a, score: score(a), index }))
+    .sort((x, y) => y.score - x.score || x.index - y.index)
+    .slice(0, limit)
+    .map(({ a }) => a);
 }
 
 export function getFeaturedArticles(limit = 3): Article[] {
