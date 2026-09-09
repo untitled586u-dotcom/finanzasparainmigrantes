@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://finanzasparainmigrantes.com/sitemap.xml
+Sitemap: https://finanzasparainmigrantes.com/sitemap-hubs.xml
