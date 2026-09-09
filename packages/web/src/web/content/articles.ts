@@ -18,6 +18,13 @@ export function getArticle(slug: string): Article | undefined {
 }
 
 export function getArticlesByCategory(categorySlug: string): Article[] {
+  if (categorySlug === "seguros") return articles.filter((a) => a.category === "seguro-de-auto" || a.category === "seguros");
+  if (categorySlug === "remesas") {
+    return articles.filter((a) => {
+      const text = `${a.title} ${a.description} ${a.keywords.join(" ")}`.toLowerCase();
+      return a.category === "banca" && /(enviar dinero|remesa|méxico|mexico|guatemala|honduras|el salvador|venezuela|colombia|ecuador|república dominicana|latinoamérica|latinoamerica)/i.test(text);
+    });
+  }
   return articles.filter((a) => a.category === categorySlug);
 }
 
