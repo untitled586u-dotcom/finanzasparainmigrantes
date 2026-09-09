@@ -2,18 +2,19 @@ import { useId } from "react";
 
 interface LogoMarkProps { className?: string; }
 
-/** Mark based directly on the approved reference: orange square, white home/finance symbol. */
+/** Compact version of the approved brand mark: home + growth + U.S. identity. */
 export function LogoMark({ className = "h-10 w-10" }: LogoMarkProps) {
   const titleId = useId();
   return (
     <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-labelledby={titleId} role="img">
       <title id={titleId}>Finanzas Para Inmigrantes</title>
-      <rect width="48" height="48" rx="11" fill="#FF7A1A"/>
-      <path d="M13 23.2 24 14l11 9.2" stroke="white" strokeWidth="2.8" strokeLinecap="round" strokeLinejoin="round"/>
-      <path d="M16.2 22.2v14h15.6v-14" stroke="white" strokeWidth="2.5" strokeLinejoin="round"/>
-      <path d="M21 36.2v-7.1h6v7.1" stroke="white" strokeWidth="2.3"/>
-      <path d="M21 25.1h2.7M27 25.1h-2.7" stroke="white" strokeWidth="2.2" strokeLinecap="round"/>
-      <path d="m29.4 30.2 2.3 2.3 3.8-4.1" stroke="#DFF7ED" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+      <rect width="48" height="48" rx="11" fill="#F4FAFD"/>
+      <circle cx="34.5" cy="12.5" r="5" fill="#FFB51B"/>
+      <path d="M7 22.5 23.5 9 40 22.5" stroke="#1264A3" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 21.5v18h24v-18" fill="white" stroke="#1264A3" strokeWidth="2.4" strokeLinejoin="round"/>
+      <path d="M16 35V25h4v10M22 35V21h4v14M28 35V28h4v7" fill="#0B9A78"/>
+      <path d="M8 39.5c8.5 2.8 20.5 2.3 31.5-3.7" stroke="#E44736" strokeWidth="2.5" strokeLinecap="round"/>
+      <path d="M8 39.5c8.8 2.7 19.8 2.2 30.2-3.4" stroke="#1264A3" strokeWidth="1.5" strokeLinecap="round" strokeDasharray="3 2"/>
     </svg>
   );
 }
