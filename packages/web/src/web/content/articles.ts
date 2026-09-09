@@ -28,6 +28,16 @@ export function getArticlesByCategory(categorySlug: string): Article[] {
   return articles.filter((a) => a.category === categorySlug);
 }
 
+const REMITTANCE_RE = /(enviar dinero|remesa|méxico|mexico|guatemala|honduras|el salvador|venezuela|colombia|ecuador|república dominicana|latinoamérica|latinoamerica)/i;
+
+/** Returns the SEO hub that should receive the article's contextual links. */
+export function getArticleHubSlug(article: Article): string {
+  if (article.category === "seguro-de-auto" || article.category === "seguros") return "seguros";
+  if (article.category === "banca" && REMITTANCE_RE.test(`${article.title} ${article.description} ${article.keywords.join(" ")}`)) return "remesas";
+  if (["credito", "banca", "prestamos", "impuestos"].includes(article.category)) return article.category;
+  return "articulos";
+}
+
 const STOP_WORDS = new Set(["para", "como", "cómo", "desde", "entre", "sobre", "tiene", "tener", "cuando", "donde", "quien", "qué", "esta", "este", "with", "your", "from", "that", "this"]);
 
 function normalizeTerms(values: string[]): Set<string> {
