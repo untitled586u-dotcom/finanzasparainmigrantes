@@ -2,47 +2,57 @@ import type { Category } from "./types";
 
 export const categories: Category[] = [
   {
-    slug: "seguro-de-auto",
-    name: "Seguro de Auto",
-    short: "Seguros",
-    description:
-      "Cómo asegurar tu carro en EE.UU. aunque no tengas licencia americana, SSN o historial. Compara, ahorra y evita multas.",
-    icon: "car",
+    slug: "credito",
+    name: "Crédito en EE.UU. para inmigrantes",
+    short: "Crédito",
+    description: "Construye y mejora tu crédito desde cero, incluso si empezaste con ITIN o sin historial. Tarjetas, puntaje, reportes, cobranza y más.",
+    icon: "credit-card",
   },
   {
-    slug: "credito",
-    name: "Crédito",
-    short: "Crédito",
-    description:
-      "Construye y mejora tu puntaje de crédito desde cero. Tarjetas para inmigrantes, reportes de crédito y trucos que sí funcionan.",
-    icon: "credit-card",
+    slug: "seguros",
+    name: "Seguros para inmigrantes",
+    short: "Seguros",
+    description: "Entiende seguro de auto, salud, vida y hogar/renta en EE.UU., con guías prácticas para inmigrantes y requisitos por estado.",
+    icon: "shield-check",
+  },
+  {
+    slug: "banca",
+    name: "Banca y documentos",
+    short: "Banca",
+    description: "Abre cuentas, entiende SSN e ITIN, usa matrícula consular y organiza tus primeros pasos financieros en EE.UU.",
+    icon: "landmark",
+  },
+  {
+    slug: "remesas",
+    name: "Remesas",
+    short: "Remesas",
+    description: "Compara y entiende cómo enviar dinero desde EE.UU. a México, Centroamérica, Sudamérica y el Caribe.",
+    icon: "send",
   },
   {
     slug: "prestamos",
     name: "Préstamos",
     short: "Préstamos",
-    description:
-      "Financia tu carro, tu casa o una emergencia. Opciones reales de préstamos con ITIN, sin historial o con mal crédito.",
+    description: "Opciones para carro, casa, préstamos personales e hipotecas con ITIN, sin historial o con mal crédito.",
     icon: "hand-coins",
-  },
-  {
-    slug: "banca",
-    name: "Banca y Documentos",
-    short: "Banca",
-    description:
-      "Abre cuentas, envía remesas y maneja tus trámites financieros en EE.UU. sin complicaciones, con ITIN, pasaporte o matrícula consular.",
-    icon: "landmark",
   },
   {
     slug: "impuestos",
     name: "Impuestos e ITIN",
     short: "Impuestos",
-    description:
-      "Saca tu ITIN, declara tus taxes y entiende los cambios de 2026: Crédito por Hijos, el nuevo impuesto a las remesas y más, explicado claro.",
+    description: "Saca o renueva tu ITIN, declara tus taxes y entiende W-7, 1099, Schedule C y créditos fiscales.",
     icon: "receipt",
   },
 ];
 
+const legacyAuto: Category = {
+  slug: "seguro-de-auto",
+  name: "Seguro de Auto",
+  short: "Seguros",
+  description: "Guías sobre seguro de auto para inmigrantes, incluyendo ITIN, matrícula consular, licencia y requisitos estatales.",
+  icon: "car",
+};
+
 export function getCategory(slug: string): Category | undefined {
-  return categories.find((c) => c.slug === slug);
+  return categories.find((c) => c.slug === slug) ?? (slug === "seguro-de-auto" ? legacyAuto : undefined);
 }
