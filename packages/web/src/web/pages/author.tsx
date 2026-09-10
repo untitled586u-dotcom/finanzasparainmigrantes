@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, BookOpen } from "lucide-react";
+import { Mail, BookOpen, ShieldCheck } from "lucide-react";
 import { useSeo } from "../hooks/use-seo";
 import { SITE } from "../lib/site";
 import { AUTHOR } from "../lib/author";
@@ -86,6 +86,23 @@ export default function AuthorPage() {
           <p key={p.slice(0, 30)}>{p}</p>
         ))}
       </div>
+
+      <section className="mt-8 rounded-2xl border border-border bg-secondary/40 p-6 sm:p-7">
+        <div className="flex items-start gap-3">
+          <ShieldCheck className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+          <div>
+            <h2 className="font-display text-xl font-semibold text-foreground">
+              Fuentes y enfoque editorial
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-muted-foreground">
+              Investigamos cada guía con información pública y fuentes primarias cuando están disponibles. Para temas financieros, fiscales y de seguros priorizamos organismos oficiales, reguladores, contratos y condiciones publicadas por las entidades correspondientes.
+            </p>
+            <p className="mt-3 text-sm leading-6 text-muted-foreground">
+              No presentamos el contenido como asesoría legal, fiscal o financiera personalizada. Cuando una situación depende del estado, del estatus migratorio o de circunstancias individuales, lo indicamos y recomendamos verificar los requisitos aplicables.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {AUTHOR.links.length > 0 && (
         <ul className="mt-6 flex flex-wrap gap-3">
