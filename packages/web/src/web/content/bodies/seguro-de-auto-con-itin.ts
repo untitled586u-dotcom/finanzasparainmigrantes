@@ -149,4 +149,4 @@ Como mínimo, cumple la ley de tu estado y las condiciones del prestamista si el
 - [Cómo comprar carro con ITIN](/articulo/comprar-carro-con-itin)
 - [Cómo renovar un ITIN vencido](/articulo/renovar-itin-vencido)
 
-*Información educativa, no asesoría de seguros, fiscal, legal ni migratoria. Los requisitos, precios y criterios de suscripción varían por estado, aseguradora y perfil. Confirma siempre las condiciones actuales antes de contratar.*`;
+*Información educativa, no asesoría de seguros, fiscal, legal ni migratoria. Los requisitos, precios y criterios de suscripción varían por estado, aseguradora y perfil. Confirma siempre las condiciones actuales antes de contratar.*
