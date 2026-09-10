@@ -9,7 +9,7 @@ function NavLinks({ onClick }: { onClick?: () => void }) {
   const [location] = useLocation();
   const links = [
     { label: "Inicio", to: "/" },
-    ...categories.map((c) => ({ label: c.name === "Banca y Documentos" ? "Bancos" : c.short, to: `/categoria/${c.slug}` })),
+    ...categories.map((c) => ({ label: c.slug === "banca" ? "Bancos" : c.short, to: `/categoria/${c.slug}` })),
   ];
   return <>{links.map((item) => {
     const active = location === item.to;
@@ -22,13 +22,13 @@ function Header() {
   return <header className="sticky top-0 z-50 border-b border-[#E4EBF2] bg-white/95 backdrop-blur-xl">
     <div className="mx-auto flex min-h-[66px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:px-5 md:px-7">
       <Link to="/" aria-label={SITE.name} className="min-w-0"><Logo /></Link>
-      <nav className="hidden items-center 2xl:flex"><NavLinks /></nav>
+      <nav className="hidden items-center xl:flex"><NavLinks /></nav>
       <div className="flex shrink-0 items-center gap-1">
         <Link to="/articulos" aria-label="Buscar y explorar guías" className="flex h-10 w-10 items-center justify-center rounded-full text-[#123B63] hover:bg-[#F3F7FA]"><Search className="h-[20px] w-[20px]" strokeWidth={2}/></Link>
-        <button type="button" className="rounded-lg p-2 hover:bg-[#F3F7FA] 2xl:hidden" onClick={() => setOpen((v) => !v)} aria-label={open ? "Cerrar menú" : "Abrir menú"} aria-expanded={open}>{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button>
+        <button type="button" className="rounded-lg p-2 hover:bg-[#F3F7FA] xl:hidden" onClick={() => setOpen((v) => !v)} aria-label={open ? "Cerrar menú" : "Abrir menú"} aria-expanded={open}>{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</button>
       </div>
     </div>
-    {open && <div className="border-t border-[#E4EBF2] bg-white shadow-sm 2xl:hidden"><nav className="mx-auto grid max-w-[1180px] grid-cols-2 gap-1 px-4 py-4 sm:grid-cols-3 sm:px-5"><NavLinks onClick={() => setOpen(false)} /><Link to="/articulos" onClick={() => setOpen(false)} className="col-span-full mt-2 inline-flex items-center justify-center rounded-xl bg-[#F28C28] px-4 py-3 text-sm font-bold text-white">Explorar todas las guías →</Link></nav></div>}
+    {open && <div className="border-t border-[#E4EBF2] bg-white shadow-sm xl:hidden"><nav className="mx-auto grid max-w-[1180px] grid-cols-2 gap-1 px-4 py-4 sm:grid-cols-3 sm:px-5"><NavLinks onClick={() => setOpen(false)} /><Link to="/articulos" onClick={() => setOpen(false)} className="col-span-full mt-2 inline-flex items-center justify-center rounded-xl bg-[#F28C28] px-4 py-3 text-sm font-bold text-white">Explorar todas las guías →</Link></nav></div>}
   </header>;
 }
 
