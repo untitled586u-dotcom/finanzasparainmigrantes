@@ -30,6 +30,42 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Normalize article body filenames for SSG
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import difflib
+          import re
+
+          root = Path("packages/web/src/web/content")
+          body_dir = root / "bodies"
+          article_files = list(root.glob("articles*.ts"))
+          slugs = []
+          for path in article_files:
+              text = path.read_text(encoding="utf-8")
+              slugs.extend(re.findall(r"slug:\s*[\"']([^\"']+)[\"']", text))
+
+          existing = {p.stem for p in body_dir.glob("*.ts")}
+          created = []
+          for slug in sorted(set(slugs)):
+              if slug in existing:
+                  continue
+              candidates = sorted(existing)
+              if not candidates:
+                  continue
+              best = max(candidates, key=lambda name: difflib.SequenceMatcher(None, slug, name).ratio())
+              score = difflib.SequenceMatcher(None, slug, best).ratio()
+              if score < 0.50:
+                  raise SystemExit(f"No hay cuerpo suficientemente parecido para {slug} (mejor: {best}, {score:.2f})")
+              target = body_dir / f"{slug}.ts"
+              target.write_text(f'import body from "./{best}";\n\nexport default body;\n', encoding="utf-8")
+              created.append((slug, best, score))
+
+          for slug, best, score in created:
+              print(f"[ssg-alias] {slug} -> {best} ({score:.2f})")
+          print(f"[ssg-alias] {len(created)} aliases creados")
+          PY
+
       - name: Build web
         run: bun run build:web
         env:
@@ -45,7 +81,7 @@ jobs:
                   continue
               text = path.read_text(encoding="utf-8")
               text = text.replace('"/images/', '"images/')
-              text = text.replace("'/images/", "'images/")
+              text = text.replace("'/images/", "'images/')
               text = text.replace('url(/images/', 'url(images/')
               path.write_text(text, encoding="utf-8")
           PY
