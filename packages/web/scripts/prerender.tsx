@@ -189,16 +189,38 @@ const routes = [
   ...articles.map((a) => `/articulo/${a.slug}`),
 ];
 
+/**
+ * Lee todos los cuerpos sin depender de que Bun pueda interpretar cada .ts.
+ * Algunos artículos históricos son Markdown puro guardado con extensión .ts;
+ * esos archivos no pueden importarse directamente durante el pre-render.
+ *
+ * Los módulos modernos con `export default` siguen usando import dinámico para
+ * respetar exactamente su valor exportado. Los históricos se leen como texto
+ * y se conservan byte por byte, incluyendo su Markdown e internal links.
+ */
+async function loadArticleBodyForSsg(slug: string): Promise<string> {
+  const filename = join(import.meta.dir, "../src/web/content/bodies", `${slug}.ts`);
+  const source = readFileSync(filename, "utf8");
+
+  if (/^\s*export\s+default\b/m.test(source)) {
+    const mod = (await import(`../src/web/content/bodies/${slug}.ts`)) as {
+      default?: string;
+    };
+    if (typeof mod.default !== "string") {
+      throw new Error(`El cuerpo del artículo ${slug} no exporta un string default válido`);
+    }
+    return mod.default;
+  }
+
+  return source;
+}
+
 // El cuerpo markdown se carga por adelantado para que el primer render (el que
 // acaba en el HTML estático) ya incluya el artículo completo.
-// Se importa el módulo directamente (no vía `loadArticleBody`) porque aquí no
-// existe el `import.meta.glob` de Vite.
 for (const article of articles) {
-  const mod = (await import(`../src/web/content/bodies/${article.slug}.ts`)) as {
-    default?: string;
-  };
-  if (!mod.default) throw new Error(`Falta el cuerpo del artículo ${article.slug}`);
-  preloadArticleBody(article.slug, mod.default);
+  const markdown = await loadArticleBodyForSsg(article.slug);
+  if (!markdown) throw new Error(`Falta el cuerpo del artículo ${article.slug}`);
+  preloadArticleBody(article.slug, markdown);
 }
 
 let written = 0;
