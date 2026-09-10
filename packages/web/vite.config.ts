@@ -8,6 +8,31 @@ import ssgPlugin from "./vite/ssg-plugin";
 
 const root = path.resolve(__dirname, "../..");
 
+// Algunas entradas antiguas de contenido son Markdown guardado directamente
+// en archivos .ts, sin `export default`. Vite intenta parsearlas como TypeScript
+// y detiene toda la compilación. Las normalizamos aquí como módulos que exportan
+// el texto original, sin modificar ni perder el contenido editorial.
+function markdownBodyCompatibilityPlugin() {
+	return {
+		name: "markdown-body-compatibility",
+		enforce: "pre" as const,
+		transform(code: string, id: string) {
+			if (!id.includes("/src/web/content/bodies/") || !id.endsWith(".ts")) {
+				return null;
+			}
+
+			if (/^\s*export\s+(default|const|let|var|function|class)\b/m.test(code)) {
+				return null;
+			}
+
+			return {
+				code: `export default ${JSON.stringify(code)};`,
+				map: null,
+			};
+		},
+	};
+}
+
 export default defineConfig(({ mode }) => {
 	const env = loadEnv(mode, root, '');
 	Object.assign(process.env, env);
@@ -17,7 +42,7 @@ export default defineConfig(({ mode }) => {
 		// All env files live at the repo root — keep Vite's own env loading there too,
 		// so packages/web/.env* files can never shadow the root .env.
 		envDir: root,
-        plugins: [honoDevPlugin(), react(), tailwind(), assetOptimizerPlugin(), ssgPlugin()], 
+        plugins: [markdownBodyCompatibilityPlugin(), honoDevPlugin(), react(), tailwind(), assetOptimizerPlugin(), ssgPlugin()], 
 		resolve: {
 			alias: {
 				"@": path.resolve(__dirname, "./src/web"),
