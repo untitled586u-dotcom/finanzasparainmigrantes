@@ -21,9 +21,9 @@ export const impuestosArticles: Article[] = [
     slug: "como-sacar-itin-paso-a-paso-w7",
     seoTitle: "Cómo sacar el ITIN paso a paso: W-7 y requisitos 2026",
     title: "Cómo sacar tu ITIN paso a paso (Formulario W-7)",
-    description: "Guía práctica para solicitar tu ITIN con el Formulario W-7: quién puede necesitarlo, documentos que pueden ser necesarios, dónde presentar la solicitud y qué esperar del proceso.",
+    description: "Aprende cómo sacar tu ITIN paso a paso con el Formulario W-7: quién lo necesita, qué documentos acepta el IRS, dónde presentar la solicitud y qué errores evitar.",
     category: "impuestos", readMinutes: 9, date: "2026-08-26",
-    keywords: ["cómo sacar ITIN", "formulario W-7", "solicitar ITIN paso a paso", "ITIN sin SSN", "documentos para solicitar el ITIN"],
+    keywords: ["cómo sacar ITIN", "cómo sacar mi ITIN", "cómo obtener un ITIN", "formulario W-7", "solicitar ITIN paso a paso", "requisitos para sacar ITIN", "ITIN sin SSN", "documentos para solicitar el ITIN", "cómo solicitar ITIN en Estados Unidos"],
   },
   {
     slug: "como-declarar-impuestos-con-itin-2026",
@@ -43,11 +43,11 @@ export const impuestosArticles: Article[] = [
   },
   {
     slug: "renovar-itin-vencido",
-    seoTitle: "Cómo renovar un ITIN vencido en 2026: guía W-7",
+    seoTitle: "Cómo renovar un ITIN vencido en 2026: requisitos y W-7",
     title: "Cómo renovar un ITIN vencido: paso a paso con el formulario W-7",
-    description: "Descubre cómo comprobar si tu ITIN necesita renovación, qué formulario y documentos preparar y qué pasos seguir para presentar la renovación correctamente.",
+    description: "Aprende cómo renovar un ITIN vencido: cómo comprobar si caducó, qué formulario y documentos preparar, dónde presentar el W-7 y qué errores pueden retrasar el trámite.",
     category: "impuestos", readMinutes: 10, date: "2026-08-06",
-    keywords: ["renovar ITIN vencido", "cómo renovar mi ITIN", "formulario W-7 renovación", "ITIN expirado qué hacer", "cómo saber si mi ITIN venció", "renovación ITIN 2026"],
+    keywords: ["renovar ITIN vencido", "cómo renovar mi ITIN", "cómo renovar un ITIN", "ITIN vencido qué hacer", "ITIN expirado qué hacer", "cómo saber si mi ITIN venció", "requisitos para renovar ITIN", "formulario W-7 renovación", "renovación ITIN 2026"],
   },
   {
     slug: "impuestos-trabajador-independiente-1099-itin",
