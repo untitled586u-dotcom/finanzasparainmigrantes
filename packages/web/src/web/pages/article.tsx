@@ -10,7 +10,7 @@ import { AdSlot } from "../components/ad-slot";
 import { AuthorBox } from "../components/author-byline";
 import { AUTHOR } from "../lib/author";
 import { formatDate, formatDateShort, SITE } from "../lib/site";
-import { articleComponents, faqFromMarkdown, remarkArticle, tocFromMarkdown } from "../lib/markdown";
+import { articleComponents, tocFromMarkdown } from "../lib/markdown";
 import NotFound from "./not-found";
 
 const md = (content:string) => <ReactMarkdown remarkPlugins={[remarkGfm,remarkArticle]} components={articleComponents}>{content}</ReactMarkdown>;
@@ -23,8 +23,7 @@ export default function ArticlePage() {
   const [body,setBody] = useState<string|null>(()=>getPreloadedBody(slug));
   useEffect(()=>{let active=true; const pre=getPreloadedBody(slug); setBody(pre); if(!slug||pre)return; loadArticleBody(slug).then(text=>{if(active)setBody(text)}); return()=>{active=false}},[slug]);
   const toc=useMemo(()=>body?tocFromMarkdown(body):[],[body]);
-  const faq=useMemo(()=>body?faqFromMarkdown(body):[],[body]);
-  const jsonLd=useMemo(()=>{if(!article)return undefined; const url=`${SITE.url}/articulo/${article.slug}`; const graph:Record<string,unknown>[]=[{"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.description,datePublished:article.date,dateModified:article.date,inLanguage:"es",keywords:article.keywords.join(", "),image:SITE.ogImage,mainEntityOfPage:{"@type":"WebPage","@id":url},author:{"@type":AUTHOR.isBrand?"Organization":"Person",name:AUTHOR.isBrand?SITE.name:AUTHOR.name,url:`${SITE.url}/autor/${AUTHOR.slug}`},publisher:{"@type":"Organization",name:SITE.name,url:SITE.url,logo:{"@type":"ImageObject",url:`${SITE.url}/icon-512.png`}},articleSection:category?.name},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Inicio",item:SITE.url},...(category?[{"@type":"ListItem",position:2,name:category.name,item:`${SITE.url}/categoria/${category.slug}`}]:[]),{"@type":"ListItem",position:category?3:2,name:article.title,item:url}]}]; if(faq.length)graph.push({"@context":"https://schema.org","@type":"FAQPage",mainEntity:faq.map(f=>({"@type":"Question",name:f.question,acceptedAnswer:{"@type":"Answer",text:f.answer}}))}); return graph},[article,category,faq]);
+  const jsonLd=useMemo(()=>{if(!article)return undefined; const url=`${SITE.url}/articulo/${article.slug}`; return [{"@context":"https://schema.org","@type":"Article",headline:article.title,description:article.description,datePublished:article.date,dateModified:article.date,inLanguage:"es",keywords:article.keywords.join(", "),image:SITE.ogImage,mainEntityOfPage:{"@type":"WebPage","@id":url},author:{"@type":AUTHOR.isBrand?"Organization":"Person",name:AUTHOR.isBrand?SITE.name:AUTHOR.name,url:`${SITE.url}/autor/${AUTHOR.slug}`},publisher:{"@type":"Organization",name:SITE.name,url:SITE.url,logo:{"@type":"ImageObject",url:`${SITE.url}/icon-512.png`}},articleSection:category?.name},{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Inicio",item:SITE.url},...(category?[{"@type":"ListItem",position:2,name:category.name,item:`${SITE.url}/categoria/${category.slug}`}]:[]),{"@type":"ListItem",position:category?3:2,name:article.title,item:url}]}]},[article,category]);
   useSeo({title:article?(article.seoTitle??article.title):"Artículo",description:article?.description,path:article?`/articulo/${article.slug}`:"/",type:"article",keywords:article?.keywords,jsonLd});
   if(!article)return <NotFound/>;
   const related=getRelatedArticles(article,4);
