@@ -7,8 +7,8 @@
  *
  * Antes se cargaban desde fonts.googleapis.com, lo que costaba 760 ms de
  * renderizado bloqueado y provocaba un CLS de 0.124: en un artículo de 10.500 px
- * el cambio de la fuente de reserva a la definitiva reflowaba todo el texto y el
- * pie de página saltaba casi 1.000 px.
+ * el cambio de la fuente de reserva a la definitiva reflowaba todo el texto y
+ * el pie de página saltaba casi 1.000 px.
  *
  * Los dos "-fallback" replican las métricas (anchura media, ascendente,
  * descendente) de Space Grotesk, Public Sans e IBM Plex Mono usando Arial y
@@ -118,8 +118,6 @@
 
 :root {
   --radius: 0.875rem;
-
-  /* Paleta de marca (tokens compartidos por todas las plantillas). */
   --ink: #10233d;
   --ink-soft: #4b5c72;
   --line: #e1e4e0;
@@ -130,14 +128,7 @@
   --blue: #2c5da1;
   --plum: #7a4fa3;
   --navy-deep: #0a1930;
-
-  /*
-   * Color de sección. Lo sobrescribe `[data-cat]` en cada página de categoría
-   * y de artículo, así el usuario reconoce en qué sección está sin leer nada.
-   * El valor por defecto (marigold) es el de la portada y las páginas legales.
-   */
   --cat-accent: var(--marigold);
-
   --background: #f6f7f5;
   --foreground: #10233d;
   --card: #ffffff;
@@ -164,20 +155,26 @@
   }
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    overflow-x: clip;
+    -webkit-tap-highlight-color: transparent;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-optical-sizing: auto;
   }
+  :focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--ring) 55%, white);
+    outline-offset: 3px;
+  }
 }
 
-/* Article prose tuning */
 .prose-article {
   --tw-prose-body: #35455c;
   --tw-prose-headings: #10233d;
@@ -224,12 +221,6 @@
   background: var(--secondary);
 }
 
-
-/*
- * Color por categoría. Un único punto de verdad: `data-cat` se pone en el
- * contenedor de la página (categoría, artículo) y todo lo que use
- * `--cat-accent` se adapta solo.
- */
 [data-cat="seguro-de-auto"] { --cat-accent: var(--teal); }
 [data-cat="credito"] { --cat-accent: var(--marigold); }
 [data-cat="prestamos"] { --cat-accent: var(--coral); }
@@ -240,7 +231,6 @@
   font-family: var(--font-mono);
 }
 
-/* Banda de color de la cabecera del artículo. */
 .art-visual {
   background: var(--cat-accent);
   position: relative;
@@ -257,7 +247,6 @@
   );
 }
 
-/* Índice lateral. */
 .toc-link {
   display: block;
   border-left: 2px solid var(--line);
@@ -274,18 +263,6 @@
   font-weight: 600;
 }
 
-/*
- * Callouts. Se escriben en el markdown con la sintaxis de alertas de GitHub:
- *
- *   > [!TIP]
- *   > Texto del dato clave.
- *
- *   > [!AVISO]
- *   > Texto de la advertencia.
- *
- * `remark-gfm` los deja como blockquote y el renderizador de `article.tsx` los
- * convierte en estos bloques.
- */
 .callout {
   display: flex;
   gap: 0.75rem;
@@ -330,7 +307,6 @@
   color: var(--coral);
 }
 
-/* Pasos numerados: los genera una lista ordenada marcada con `{.steps}`. */
 .steps {
   counter-reset: step;
   display: flex;
@@ -361,4 +337,47 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.9rem;
+}
+
+.article-card {
+  content-visibility: auto;
+  contain-intrinsic-size: 380px;
+}
+
+@media (max-width: 640px) {
+  .prose-article {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+  .prose-article h2 {
+    margin-top: 2rem;
+    font-size: 1.35rem;
+  }
+  .prose-article h3 {
+    margin-top: 1.45rem;
+    font-size: 1.08rem;
+  }
+  .prose-article table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .callout {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
