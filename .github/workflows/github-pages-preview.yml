@@ -52,13 +52,14 @@ jobs:
                   continue
               candidates = sorted(existing)
               if not candidates:
-                  continue
+                  raise SystemExit("No hay archivos de cuerpo de artículos")
               best = max(candidates, key=lambda name: difflib.SequenceMatcher(None, slug, name).ratio())
               score = difflib.SequenceMatcher(None, slug, best).ratio()
               if score < 0.50:
                   raise SystemExit(f"No hay cuerpo suficientemente parecido para {slug} (mejor: {best}, {score:.2f})")
               target = body_dir / f"{slug}.ts"
               target.write_text(f'import body from "./{best}";\n\nexport default body;\n', encoding="utf-8")
+              existing.add(slug)
               created.append((slug, best, score))
 
           for slug, best, score in created:
@@ -81,7 +82,7 @@ jobs:
                   continue
               text = path.read_text(encoding="utf-8")
               text = text.replace('"/images/', '"images/')
-              text = text.replace("'/images/", "'images/')
+              text = text.replace("'/images/", "'images/")
               text = text.replace('url(/images/', 'url(images/')
               path.write_text(text, encoding="utf-8")
           PY
