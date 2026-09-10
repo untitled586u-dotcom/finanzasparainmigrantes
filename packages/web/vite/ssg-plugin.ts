@@ -10,9 +10,8 @@ const webRoot = path.resolve(__dirname, "..");
  * viven solo en ese script, producción se despliega con el shell del SPA: cada
  * ruta cae en el fallback 404 y el HTML crudo pierde title, canonical y H1.
  *
- * Enganchando los tres pasos al propio ciclo de vida de Vite, cualquier forma de
- * construir (script del package, turbo, `bunx vite build`) produce el sitio
- * estático completo.
+ * Enganchando los pasos al ciclo de vida de Vite, cualquier forma de construir
+ * (script del package, turbo, `bunx vite build`) produce el sitio estático completo.
  */
 export default function ssgPlugin(): Plugin {
 	const run = (script: string, label: string) => {
@@ -28,12 +27,10 @@ export default function ssgPlugin(): Plugin {
 		buildStart() {
 			run("scripts/generate-sitemap.ts", "sitemap + robots + llms.txt");
 		},
-		// closeBundle corre cuando `dist/` ya está escrito por completo.
-		//
-		// No se pre-comprime a .br/.gz: el proxy del despliegue descomprimía la
-		// respuesta pero mantenía el Content-Length del fichero comprimido, lo que
-		// truncaba el HTML. La compresión la hace el proxy.
-		closeBundle() {
+		// `closeBundle` puede ejecutarse antes de que el directorio de salida haya
+		// terminado de escribirse en esta versión de Vite. `writeBundle` garantiza
+		// que `dist/index.html` exista antes del pre-render.
+		writeBundle() {
 			run("scripts/prerender.tsx", "pre-render de rutas");
 		},
 	};
