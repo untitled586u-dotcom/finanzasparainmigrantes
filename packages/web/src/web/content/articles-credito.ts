@@ -21,9 +21,9 @@ export const creditoArticles: Article[] = [
     slug: "mejorar-puntaje-credito-rapido",
     seoTitle: "Cómo subir tu puntaje de crédito rápido: 9 acciones 2026",
     title: "Cómo subir tu puntaje de crédito rápido: 9 acciones que funcionan",
-    description: "Descubre cómo subir tu puntaje de crédito más rápido: utilización, pagos, límites, errores del reporte y un plan práctico de 60 días.",
+    description: "Aprende cómo mejorar tu puntaje de crédito rápido y de forma responsable: pagos a tiempo, utilización, límites, errores del reporte y un plan práctico para los próximos 60 días.",
     category: "credito", readMinutes: 10, date: "2026-08-26",
-    keywords: ["subir puntaje de crédito", "mejorar credit score rápido", "cómo subir el crédito rápido", "mejorar puntaje de crédito", "utilización de crédito", "reparar crédito gratis"],
+    keywords: ["subir puntaje de crédito", "mejorar credit score rápido", "cómo subir el crédito rápido", "mejorar puntaje de crédito", "cómo mejorar mi crédito rápido", "subir credit score en 30 días", "utilización de crédito", "reparar crédito gratis"],
   },
   {
     slug: "tarjeta-credito-con-itin",
@@ -45,9 +45,9 @@ export const creditoArticles: Article[] = [
     slug: "reporte-de-credito-gratis-como-leerlo",
     seoTitle: "Reporte de crédito gratis: cómo pedirlo y leerlo | 2026",
     title: "Reporte de crédito gratis: cómo pedirlo y cómo leerlo línea por línea",
-    description: "Aprende cómo obtener tu reporte de crédito gratis, qué revisar en Equifax, Experian y TransUnion y cómo disputar errores.",
+    description: "Aprende cómo obtener tu reporte de crédito gratis y revisarlo paso a paso en Equifax, Experian y TransUnion, qué errores buscar y cómo disputar información incorrecta.",
     category: "credito", readMinutes: 10, date: "2026-08-08",
-    keywords: ["reporte de crédito gratis", "cómo sacar mi reporte de crédito", "AnnualCreditReport en español", "cómo leer mi reporte de crédito", "disputar errores reporte de crédito", "reporte Equifax Experian TransUnion"],
+    keywords: ["reporte de crédito gratis", "cómo sacar mi reporte de crédito", "cómo obtener mi reporte de crédito gratis", "AnnualCreditReport en español", "reporte de crédito gratis en español", "cómo leer mi reporte de crédito", "disputar errores reporte de crédito", "reporte Equifax Experian TransUnion"],
   },
   {
     slug: "deuda-en-cobranza-derechos-negociar",
