@@ -5,23 +5,29 @@ import { Logo } from "./logo";
 import { categories } from "../content/categories";
 import { SITE } from "../lib/site";
 
+const primaryNav = [
+  { label: "Inicio", to: "/" },
+  { label: "Crédito", to: "/categoria/credito" },
+  { label: "Bancos", to: "/categoria/banca" },
+  { label: "Seguro de auto", to: "/categoria/seguro-de-auto" },
+  { label: "Préstamos", to: "/categoria/prestamos" },
+  { label: "Impuestos", to: "/categoria/impuestos" },
+  { label: "ITIN", to: "/articulo/como-sacar-itin-paso-a-paso-w7" },
+];
+
 function NavLinks({ onClick }: { onClick?: () => void }) {
   const [location] = useLocation();
-  const links = [
-    { label: "Inicio", to: "/" },
-    ...categories.map((c) => ({ label: c.slug === "banca" ? "Bancos" : c.short, to: `/categoria/${c.slug}` })),
-  ];
-  return <>{links.map((item) => {
+  return <>{primaryNav.map((item) => {
     const active = location === item.to;
-    return <Link key={item.to} to={item.to} onClick={onClick} aria-current={active ? "page" : undefined} className={`px-2.5 py-5 text-[0.79rem] font-semibold whitespace-nowrap transition-colors ${active ? "text-[#123B63]" : "text-[#123B63]/75 hover:text-[#1264A3]"}`} style={active ? { boxShadow: "inset 0 -2px 0 0 #F28C28" } : undefined}>{item.label}</Link>;
+    return <Link key={item.to} to={item.to} onClick={onClick} aria-current={active ? "page" : undefined} className={`px-2.5 py-5 text-[0.76rem] font-semibold whitespace-nowrap transition-colors ${active ? "text-[#123B63]" : "text-[#123B63]/75 hover:text-[#1264A3]"}`} style={active ? { boxShadow: "inset 0 -2px 0 0 #F28C28" } : undefined}>{item.label}</Link>;
   })}</>;
 }
 
 function Header() {
   const [open, setOpen] = useState(false);
   return <header className="sticky top-0 z-50 border-b border-[#E4EBF2] bg-white/95 backdrop-blur-xl">
-    <div className="mx-auto flex min-h-[66px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:px-5 md:px-7">
-      <Link to="/" aria-label={SITE.name} className="min-w-0"><Logo /></Link>
+    <div className="mx-auto flex min-h-[72px] max-w-[1180px] items-center justify-between gap-3 px-4 sm:px-5 md:px-7">
+      <Link to="/" aria-label={SITE.name} className="min-w-0 shrink-0"><Logo /></Link>
       <nav className="hidden items-center xl:flex"><NavLinks /></nav>
       <div className="flex shrink-0 items-center gap-1">
         <Link to="/articulos" aria-label="Buscar y explorar guías" className="flex h-10 w-10 items-center justify-center rounded-full text-[#123B63] hover:bg-[#F3F7FA]"><Search className="h-[20px] w-[20px]" strokeWidth={2}/></Link>
@@ -33,7 +39,7 @@ function Header() {
 }
 
 function Footer() {
-  return <footer className="mt-12 bg-[#102E50] pt-9 pb-6 text-[#D8E2EC]">
+  return <footer className="mt-10 bg-[#102E50] pt-8 pb-6 text-[#D8E2EC]">
     <div className="mx-auto max-w-[1180px] px-4 sm:px-5 md:px-7">
       <div className="grid gap-7 border-b border-white/10 pb-7 lg:grid-cols-[1.2fr_2fr] lg:items-center">
         <div><Logo size="sm" showTagline onDark /><p className="mt-3 max-w-[42ch] text-[0.74rem] leading-5 text-white/60">Información educativa gratuita para tomar mejores decisiones financieras en Estados Unidos.</p></div>
