@@ -1,4 +1,4 @@
-import logoAsset from "../../../../logo-opt1-casa_1785636532633.png";
+import logoAsset from "../../../../../logo-opt1-casa_1785636532633.png";
 
 export function LogoMark({ className = "h-10 w-10" }: { className?: string }) {
   return <img src={logoAsset} className={`${className} object-contain`} alt="Finanzas Para Inmigrantes" />;
