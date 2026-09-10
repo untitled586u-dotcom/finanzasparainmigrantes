@@ -10,7 +10,7 @@ import { AdSlot } from "../components/ad-slot";
 import { AuthorBox } from "../components/author-byline";
 import { AUTHOR } from "../lib/author";
 import { formatDate, formatDateShort, SITE } from "../lib/site";
-import { articleComponents, tocFromMarkdown } from "../lib/markdown";
+import { articleComponents, remarkArticle, tocFromMarkdown } from "../lib/markdown";
 import NotFound from "./not-found";
 
 const md = (content:string) => <ReactMarkdown remarkPlugins={[remarkGfm,remarkArticle]} components={articleComponents}>{content}</ReactMarkdown>;
