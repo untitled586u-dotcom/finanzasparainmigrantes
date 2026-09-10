@@ -45,7 +45,7 @@ jobs:
                   continue
               text = path.read_text(encoding="utf-8")
               text = text.replace('"/images/', '"images/')
-              text = text.replace("'/images/", "'images/')
+              text = text.replace("'/images/", "'images/")
               text = text.replace('url(/images/', 'url(images/')
               path.write_text(text, encoding="utf-8")
           PY
