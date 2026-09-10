@@ -1,4 +1,4 @@
-Sí se puede comprar casa en Estados Unidos con ITIN. Existen programas hipotecarios de cartera ofrecidos por cooperativas de crédito, bancos comunitarios y prestamistas especializados. Pero **no existe una hipoteca ITIN universal**: el enganche, el crédito, los ingresos, las declaraciones de impuestos, las reservas y la tasa dependen del prestamista y del estado.
+export default `Sí se puede comprar casa en Estados Unidos con ITIN. Existen programas hipotecarios de cartera ofrecidos por cooperativas de crédito, bancos comunitarios y prestamistas especializados. Pero **no existe una hipoteca ITIN universal**: el enganche, el crédito, los ingresos, las declaraciones de impuestos, las reservas y la tasa dependen del prestamista y del estado.
 
 Si estás empezando, esta guía te ayuda a responder las tres preguntas importantes: **quién puede prestar, qué requisitos suelen pedir y cómo comparar ofertas sin pagar de más**. También forma parte de nuestro hub de [Préstamos](/categoria/prestamos).
 
