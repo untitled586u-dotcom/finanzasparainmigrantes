@@ -14,3 +14,11 @@
 
 [context.branch-deploy]
   command = "bun run build:web"
+
+# Preserve the legacy auto-insurance category while consolidating it
+# into the new insurance hub.
+[[redirects]]
+  from = "/categoria/seguro-de-auto"
+  to = "/categoria/seguros"
+  status = 301
+  force = true
