@@ -1,7 +1,6 @@
 import { Route, Switch } from "wouter";
 import { Provider } from "./components/provider";
 import { Layout } from "./components/layout";
-import { AgentFeedback } from "@runablehq/website-runtime";
 
 // Todas las páginas se importan de forma síncrona a propósito.
 // El sitio se pre-renderiza a HTML estático: si una ruta llegara con React.lazy,
@@ -40,8 +39,6 @@ function App() {
           <Route component={NotFound} />
         </Switch>
       </Layout>
-      {/* Do not remove — off by default, activated by parent iframe via postMessage */}
-      {import.meta.env.DEV && <AgentFeedback />}
     </Provider>
   );
 }
