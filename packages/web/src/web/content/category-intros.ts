@@ -26,9 +26,11 @@ El objetivo no es perseguir un número perfecto. Es crear un historial de pagos 
 
 El seguro de auto suele ser el punto de partida. Puedes aprender [cómo conseguir seguro de auto sin licencia de EE.UU.](/articulo/seguro-de-auto-sin-licencia-americana), qué cambia cuando utilizas [ITIN](/articulo/seguro-de-auto-con-itin) y cómo funciona el seguro con [matrícula consular](/articulo/seguro-de-auto-con-matricula-consular). Para elegir protección, revisa [cobertura mínima frente a cobertura completa](/articulo/cobertura-minima-vs-completa) y entiende qué cubren realmente los límites y deducibles.
 
+Si tu prioridad es la cobertura médica, empieza por [seguro de salud para inmigrantes](/articulo/seguro-de-salud-para-inmigrantes). Esa guía reúne las principales rutas que una persona puede necesitar investigar según su situación, como Marketplace, Medicaid, CHIP u otras alternativas. Las reglas de elegibilidad y los programas disponibles dependen de factores personales y pueden cambiar, así que conviene comprobar la información vigente en [HealthCare.gov](https://www.healthcare.gov/) y en la agencia oficial de tu estado antes de tomar una decisión.
+
 Los requisitos también cambian por estado. En el sitio encontrarás guías específicas para California, Texas, Florida, Nueva York, Arizona, Illinois, Georgia, Nevada, Colorado, Washington y Nueva Jersey. Antes de contratar, conviene comprobar los requisitos actuales del departamento de seguros de tu estado y de la propia aseguradora.
 
-El seguro no termina en el automóvil. También reunimos información sobre [seguro de salud para inmigrantes](/articulo/seguro-de-salud-para-inmigrantes), [seguro de vida para hispanos](/articulo/seguro-de-vida-para-hispanos-2026) y seguro de renta o vivienda. En cada caso, el precio es solo una parte de la decisión: límites, deducibles, exclusiones y condiciones pueden cambiar mucho el valor real de una póliza.
+El seguro no termina en el automóvil. También reunimos información sobre [seguro de vida para hispanos](/articulo/seguro-de-vida-para-hispanos-2026) y [seguro de renta o vivienda](/articulo/seguro-de-casa-y-renta-inmigrantes). En cada caso, el precio es solo una parte de la decisión: límites, deducibles, exclusiones y condiciones pueden cambiar mucho el valor real de una póliza.
 
 ### Cómo comparar un seguro
 
@@ -37,6 +39,7 @@ El seguro no termina en el automóvil. También reunimos información sobre [seg
 - Revisa el deducible y qué gastos quedarían de tu bolsillo.
 - Pregunta por exclusiones y condiciones especiales.
 - Comprueba que la información sea válida para tu estado y para la fecha de contratación.
+- En seguros de salud, verifica directamente la elegibilidad y los períodos de inscripción en la fuente oficial correspondiente.
 
 Nuestro objetivo es ayudarte a entender qué estás comprando para que puedas comparar opciones con más criterio y evitar elegir una póliza únicamente porque parece barata.`,
 
